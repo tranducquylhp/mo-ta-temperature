@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let Temperature = function (temperature) {
+            this.temperature = temperature;
+
+            this.getTemperatue = function () {
+                return this.temperature;
+            };
+            this.setTemperatue = function (temperature) {
+                this.temperature = temperature;
+            };
+
+            this.swapF = function () {
+                return 9*this.temperature/5 +32;
+            };
+            this.swapK = function () {
+                return this.temperature + 273.15;
+            };
+        }
+
+        let temperature = new Temperature(25);
+        document.write(temperature.getTemperatue() +" do C = " + temperature.swapF() + " do F "+"</br>");
+        document.write(temperature.getTemperatue() +" do C = " + temperature.swapK() + " do K "+"</br>");
+    </script>
+</body>
+</html>
